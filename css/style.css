@@ -652,6 +652,7 @@ header .flex {}
 
 
 
+
     font-size: 14px;
     color: #2583be;
     margin-top: 10px;
@@ -3212,14 +3213,14 @@ select {
 	}
 }
 @media screen and (max-width: 860px){
-	#main-documents #documents-page .top h1{
+	#documents-page .top h1{
 		font-size:38px;
 	}
-	#main-documents #documents-page .top{
+	#documents-page .top{
 		height:auto;
 		padding:30px 0;
 	}
-	#main-documents #documents-filter{
+	#documents-filter{
 		margin-top:30px;
 	}
 	#documents-filter .item, #documents-filter .btn-block{
@@ -3390,7 +3391,7 @@ select {
     padding-bottom: 5px;
 }
 .admin_documents-change .add-file img{
-    margin: 0 13px 0 0;
+    margin: 0px 5px 0 0;
     top: 5px;
 }
 .admin_documents-change .add-file span{
