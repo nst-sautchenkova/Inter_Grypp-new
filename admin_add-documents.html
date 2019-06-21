@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" type="text/css" href="css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+
+
+</head>
+
+<body class="js-loading">
+    <div id="loader">
+        <div id="cube-loader">
+            <div class='sk-rotating-plane'></div>
+        </div>
+    </div>
+    <!--/Loader-->
+
+    <div id="main" class="admin">
+        <div id="wrapper">
+            <header>
+                <div class="container-1170 flex">
+                    <div class="logo">
+                    	<a href="#"><span class="img"></span>ИнтерГрупп</a>
+                    </div>
+                    <div class="right-block">
+                        <div class="name">Администратор</div>
+                        <a href="#" class="out">Выход</a>
+                    </div>
+                </div><!--container-->
+                <nav class="menu">
+                    <div class="container-1170">
+                    <ul>
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Проекты</a></li>
+                        <li><a href="#">Документы</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                    </div>
+                </nav>
+            </header>
+
+            <section id="admin-about" class="admin_documents">
+                <div class="container-1170">
+                    <div class="top flex">
+                        <div class="main-title"><h1>Добавить документ</h1></div>
+                    </div><!--top-->
+                    
+                    <div class="admin_documents-change admin_documents-add">
+                    	<form action="" method="post">
+                            <input type="text" class="input-form" placeholder="Название документа" />
+                            <div class="flex">
+                                <input type="text" class="input-form size-1" placeholder="Название раздела" />
+                                <input type="text" class="input-form size-2" placeholder="Год" />
+                            </div>
+                            <div class="flex">
+                                <input type="text" class="input-form size-1" placeholder="ФИО разместившего документ" />
+                                <input type="text" class="input-form size-2" placeholder="Дата" />
+                            </div>   
+                            
+                            <div class="add-file">
+                                <input type="file" name="file[]" id="file-add" class="inputfile" data-multiple-caption="{count} files selected" multiple />
+                                <label for="file-add"><img src="img/d-add.png" alt=""/><span></span><p>Загрузить новый документ</p></label>
+                            </div><!--add-->
+                            
+                            
+                            <div class="btn-block flex">
+                                <a href="#" class="btn">Сохранить</a>
+                                <a href="#" class="btn delete">Удалить</a>
+                            </div>
+                        </form>
+                    </div>
+                    
+                   
+                </div><!--container-->
+            </section>
+
+        </div><!-- End #wrapper -->
+    </div><!--/Main-->
+
+	<!-- MODAL -->
+    <div class="modal admin-mod" data-id="#delete-modal">
+        <div class="modal-ov ov2"></div>
+        <div class="modal-content">
+            <div class="delete-modal">
+                <span class="close">&times;</span>
+                <div class="tit">Вы действительно хотите удалить <br/>проект ЖК “Две столицы”?</div>
+                <div class="btn-block flex">
+                    <a href="#" class="btn b-delete">Да</a>
+                    <a href="#" class="btn">Отмена</a>
+                </div>
+            </div><!-- .delete-modal -->
+        </div>
+    </div>
+    
+    <!-- MODAL -->
+    <div class="modal admin-mod" data-id="#delete-modal-2">
+        <div class="modal-ov ov2"></div>
+        <div class="modal-content">
+            <div class="delete-modal">
+                <span class="close">&times;</span>
+                <div class="tit">Вы действительно хотите удалить <br/>проект ЖК “Две столицы”?</div>
+                <div class="btn-block flex">
+                    <a href="#" class="btn b-delete">Да</a>
+                    <a href="#" class="btn">Отмена</a>
+                </div>
+            </div><!-- .delete-modal -->
+        </div>
+    </div>
+    
+    <script src="js/custom-file-input.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

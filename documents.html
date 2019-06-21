@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
+
+</head>
+
+<body class="js-loading">
+    <div id="loader">
+        <div id="cube-loader">
+            <div class='sk-rotating-plane'></div>
+        </div>
+    </div>
+    <!--/Loader-->
+
+    <div id="main">
+        <div id="wrapper">
+            <header>
+                <div class="container-1170 flex">
+                    <div class="logo">
+                        <a href="#">
+                            <img src="img/logo.png" alt="" />
+                        </a>
+                    </div>
+                    <!-- /logo -->
+
+                    <nav id="menu">
+                        <div class="cd-nav-trigger">
+                            <div class="hamburger-menu">
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                            </div>
+                        </div>
+                        <div class="menu">
+                            <ul>
+                                <li><a href="#">О компании</a></li>
+                                <li><a href="#">Проекты</a></li>
+                                <li><a href="#">Документы</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <!--/menu-->
+
+                    <div class="header_adds align-right">
+                        <a href="#">Санкт-Петербург,</p><p>Московское шоссе 13Б</p></a>
+                    </div>
+
+                    <div class="header_contacts align-right">
+                        <div id="feedback-modal" class="modal-block">
+                            <div class="tel">+7 812 607-11-39</div>
+                            <p>Заказать звонок</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            
+            <section id="documents-page">
+                <div class="top">
+                    <div class="container flex">
+                        <div class="txt">
+                            <h1>Проектная<br/> документация</h1>
+                        </div>
+                        
+                        <div id="documents-filter" class="jk-stol">
+                            <form action="" method="post">
+                                <div class="form-flex select-block">
+                                    <div class="item i-1">
+                                        <label>Выберите ЖК</label>
+                                        <select id="jk">
+                                            <option selected disabled>ЖК</option>
+                                            <option value="jk-stol">ЖК “Две столицы”</option>
+                                            <option value="jk-star">ЖК “Звезды столиц”</option> 
+                                        </select>
+                                        
+                                        <script>
+											$('#jk').change(function() {
+												var jk = $(this).val();
+												$('#documents-filter').removeClass();
+												$('#documents-filter').addClass(jk);
+											});
+                                        </script>
+                                    </div><!--item-->
+                                    
+                                    <div class="item i-2">
+                                        <label>Год размещения</label>
+                                        <select id="year">
+                                            <option selected disabled>Год</option>
+                                            <option>2000</option>
+                                            <option>2010</option> 
+                                            <option>2016</option> 
+                                            <option>2019</option> 
+                                        </select>
+                                    </div><!--item-->
+                                    
+                                    <div class="item i-3">
+                                        <div id="number-jk-stol">
+                                            <label>Участок</label>
+                                            <select>
+                                                <option selected disabled>Номер участка:</option>
+                                                <option>309</option>
+                                                <option>310</option> 
+                                                <option>311</option> 
+                                                <option>общие</option> 
+                                            </select>
+                                        </div>
+                                        <div id="number-jk-star">
+                                            <label>Корпус</label>
+                                            <select>
+                                                <option selected disabled>Номера корпусов:</option>
+                                                <option>1</option>
+                                                <option>2</option> 
+                                                <option>3</option> 
+                                                <option>4</option> 
+                                                <option>5</option> 
+                                                <option>6</option> 
+                                                <option>7</option> 
+                                                <option>общие</option> 
+                                            </select>
+                                        </div>
+                                    </div><!--item-->
+                                    <div class="btn-block">
+                                    	<a href="#documents-table" class="btn anchor">Показать документы</a>
+                                        <script type="text/javascript">
+											 $(document).ready(function(){
+												$(".anchor").click(function () {
+													event.preventDefault();
+													var id  = $(this).attr('href'),
+														top = $(id).offset().top;
+													$('body,html').animate({scrollTop: top}, 1000);
+												});
+											});
+										</script>
+                                    </div>
+                                </div>
+                            </form>
+                        </div><!-- END #documents-filter -->
+                        
+                    </div><!-- .container-->
+                </div><!-- /top -->
+                
+                <div id="documents-table">
+                    <div class="container">
+                    	<div class="table">
+                        	<table>
+                                <tr>
+                                    <th><h2 class="tit">Название документа</h2></th>
+                                    <th><h2 class="tit">Раздел</h2></th>
+                                    <th><h2 class="tit">Разместил</h2></th>
+                                    <th><h2 class="tit">Дата</h2></th>
+                                    <th><h2 class="tit">Вес</h2></th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#">
+                                            <h2 class="tit">Название документа</h2>
+                                            <p class="text-underline">Изменения к ПД (финансовый отчет)</p>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="#">
+                                            <h2 class="tit">Раздел</h2>
+                                            <p>ЖК “Две столицы”, Участок 309</p>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="#">
+                                            <h2 class="tit">Разместил</h2>
+                                            <p>Фомин Д. Н.</p>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="#">
+                                            <h2 class="tit">Дата</h2>
+                                            <p>31 марта 2019</p>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="#">
+                                            <h2 class="tit">Вес</h2>
+                                            <p>1,5 Мб</p>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#">
+                                            <h2 class="tit">Название документа</h2>
+                                            <p class="text-underline">Изменения в ПД 2018</p>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="#">
+                                            <h2 class="tit">Раздел</h2>
+                                            <p>ЖК “Две столицы”, Участок 309</p>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="#">
+                                            <h2 class="tit">Разместил</h2>
+                                            <p>Фомин Д. Н.</p>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="#">
+                                            <h2 class="tit">Дата</h2>
+                                            <p>18 мая 2018</p>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="#">
+                                            <h2 class="tit">Вес</h2>
+                                            <p>230 Кб</p>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#">
+                                            <h2 class="tit">Название документа</h2>
+                                            <p class="text-underline">Изменения в ПД 2017</p>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="#">
+                                            <h2 class="tit">Раздел</h2>
+                                            <p>ЖК “Две столицы”, Участок 309</p>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="#">
+                                            <h2 class="tit">Разместил</h2>
+                                            <p>Фомин Д. Н.</p>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="#">
+                                            <h2 class="tit">Дата</h2>
+                                            <p>2 декабря 2017</p>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="#">
+                                            <h2 class="tit">Вес</h2>
+                                            <p>180 Кб</p>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div><!--admin-table-->
+                    </div><!-- .container-->
+                </div>
+            </section>
+
+        </div>
+        <!-- End #wrapper -->
+
+        <footer>
+            <div class="footer_top">
+                <div class="container-1170">
+                    <div class="flex">
+                        <nav class="nav-menu">
+                            <ul>
+                                <li><a href="#">О компании</a></li>
+                                <li><a href="#">Проекты</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+                        </nav>
+
+                        <nav class="nav-page">
+                            <ul>
+                                <li><a href="#">ЖК “Две столицы”</a></li>
+                                <li><a href="#">ЖК “Звезды столиц”</a></li>
+                            </ul>
+                        </nav>
+
+                        <div class="footer_contacts">
+                            <div id="feedback-modal" class="modal-block">
+                                <div class="tel">+7 812 607-11-39</div>
+                            </div>
+                            <a href="#">Сантк-Петербург,<br/> Московское шоссе 13Б</a>
+                        </div>
+
+                        <div class="footer-info">
+                            <p>Материалы, предоставленные на сайте,
+                                <br/>не являются публичной офертой.</p>
+                            <div class="copyright">© ИнтерГрупп, 2019</div>
+                        </div>
+                    </div>
+                </div>
+                <!--container-->
+            </div>
+
+            <div class="footer_bottom">Создание сайта: АТР-медиа</div>
+        </footer>
+    </div>
+    <!--/Main-->
+
+    <!-- MODAL -->
+    <div class="modal" data-id="#feedback-modal">
+        <div class="modal-ov"></div>
+        <div class="modal-content">
+            <div class="feedback_form">
+                <span class="close">&times;</span>
+                <div class="tit">Закажите обратный звонок,
+                    <br/>заполнив форму</div>
+                <form action="" method="post">
+                    <div class="item-form name-form">
+                        <label>Ваше имя</label>
+                        <input type="text" class="input-form" placeholder="Константин" />
+                    </div>
+                    <div class="item-form">
+                        <input id="phone" type="text" class="input-form" placeholder="Номер телефона" />
+                    </div>
+                    <div class="txt">
+                        <p>Нажимая кнопку “Отправить сообщение”, вы
+                            <br/>соглашаетесь с <a href="#">политикой конфиденицальности</a>.</p>
+                    </div>
+                    <div class="btn-block">
+                        <button class="btn">Перезвоните мне!</button>
+                    </div>
+                </form>
+            </div>
+            <!-- .feedback_form -->
+            <script>
+                $(function() {
+                    $("#phone").mask("8(999) 999-9999");
+                });
+            </script>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
